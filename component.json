@@ -1,0 +1,32 @@
+{
+	"title": "Swagger v2 component",
+	"description": "Universal swagger v2 component.",
+	"credentials": {
+		"fields": {
+			"swaggerFileURI": {
+				"label": "Swagger file URI",
+				"viewClass": "TextFieldView"
+			},
+			"apiURI": {
+				"label": "API URI",
+				"viewClass": "TextFieldView"
+			}
+		}
+	},
+	"actions": {
+		"commonAction": {
+			"title": "Access endpoint",
+			"main": "./lib/actions/commonAction.js",
+			"fields": {
+				"endpoint": {
+					"label": "Endpoint",
+					"required": true,
+					"viewClass": "SelectView",
+					"model": "getEndpoint",
+					"prompt": "Select REST endpoint of service"
+				}
+			},
+			"dynamicMetadata": true
+		}
+	}
+}
